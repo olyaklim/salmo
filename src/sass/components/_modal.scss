@@ -141,17 +141,36 @@
   &:hover::before {
     transform: scaleX(1);
   }
+
+  @media screen and (max-width: $screen-sm-max) {
+    margin-bottom: 2em;
+  }
 }
 
 .form-message {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: $screen-sm-max) {
+    flex-wrap: wrap;
+  }
 }
 
 .form-message__right-col {
   width: 50%;
+
+  @media screen and (max-width: $screen-sm-max) {
+    width: 100%;
+  }
 }
 
 .form-message__left-col {
   width: 43%;
+
+  @media screen and (max-width: $screen-sm-max) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

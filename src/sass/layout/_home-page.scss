@@ -1,8 +1,8 @@
 // + about-section +
 
 .about-section {
-  padding-top: 5.6rem;
-  padding-bottom: 8rem;
+  padding-top: 5.6em;
+  padding-bottom: 8em;
   background-image: url(../img/bg/bg_about.jpg);
   background-size: contain;
   background-position: 50%;
@@ -11,13 +11,17 @@
 
 .about-section__wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
 .about-section__desc {
-  width: 100%;
-  padding-right: 15px;
+  width: 50%;
+
+  @media screen and (max-width: $screen-lg-max) {
+    width: 100%;
+  }
 }
 
 .about-section__title {
@@ -42,7 +46,7 @@ font-family: $yeseva;*/
 
 .about-section__img {
   position: relative;
-  width: 100%;
+  width: 50%;
   margin-bottom: 30px;
 
   &::before {
@@ -53,6 +57,16 @@ font-family: $yeseva;*/
     height: 100%;
     width: 83%;
     background: #0a4b8b;
+
+    @media screen and (max-width: $screen-lg-max) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $screen-lg-max) {
+    width: 100%;
+    order: 2;
+    margin: auto;
   }
 }
 
@@ -61,6 +75,10 @@ font-family: $yeseva;*/
   display: block;
   max-width: 100%;
   z-index: 5;
+
+  @media screen and (max-width: $screen-lg-max) {
+    margin: auto;
+  }
 }
 
 
@@ -220,6 +238,7 @@ padding-top: 2em;
 
 .sect-info__top {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 1.4em;
 }
@@ -228,10 +247,20 @@ padding-top: 2em;
   text-align: center;
   font-size: 1.1em;
   flex: 1;
+
+  @media screen and (max-width: $screen-sm-max) {
+    width: 100%;
+    flex: 0 0 auto;
+    margin-bottom: 1em;
+  }
 }
 
 .sect-info__pic {
   margin-left: 0;
+
+  @media screen and (max-width: $screen-sm-max) {
+    margin: auto;
+  }
 }
 
 .sect-info__img-wrap {
@@ -239,6 +268,10 @@ padding-top: 2em;
   display: block;
   padding-bottom: 35%;
   margin: 0 auto;
+
+  @media screen and (max-width: $screen-sm-max) {
+    padding-bottom: 30%;
+  }
 }
 
 .sect-info__text {
@@ -249,10 +282,25 @@ padding-top: 2em;
 
 .sect-info__social-desc {
   flex: 2;
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin-bottom: 1em;
+  }
 }
 
 .sect-info__btn {
   flex: 1;
+
+  @media screen and (max-width: $screen-xs-max) {
+
+    flex: 0 0 auto;
+    width: 100%;
+
+    .btn {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
 }
 
 .social-desc__item {
@@ -293,6 +341,14 @@ padding-top: 2em;
 .sale-list__item {
   width: 33.33%;
   overflow: hidden;
+
+  @media screen and (max-width: $screen-sm-max) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+  }
 }
 
 .sale-item {
@@ -422,6 +478,10 @@ padding-top: 2em;
     width: 100%;
     padding-bottom: 4em;
   }
+
+  @media screen and (max-width: $screen-xs-max) {
+    flex-direction: column;
+  }
 }
 
 .comment-slider-item__data {
@@ -496,6 +556,10 @@ flex: 4;
         transform: scale(1.5);
         transition: all 0.3s ease;
       }
+    }
+
+    @media screen and (max-width: $screen-sm-max) {
+      margin: auto;
     }
   }
 }
@@ -894,6 +958,19 @@ top: 0;
   background-origin: content-box;
   overflow: hidden;
   box-sizing: border-box;
+
+  @media screen and (max-width: $screen-tablet) {
+    height: 65vh;
+  }
+
+  @media screen and (max-width: $screen-md-max) {
+    height: 60vh;
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    height: 50vh;
+  }
+
 }
 
 .video-bord iframe{
@@ -1026,6 +1103,7 @@ top: 0;
   height: 100%;
   left: 0;
   top: 0;
+  font-size: 1rem;
   background-size: cover;
   background-position: center center;
   object-fit: cover;
@@ -1094,8 +1172,8 @@ top: 0;
   width: 6.5em;
   height: 6.5em;
   display: block;
-  font-size: 1rem;
-  font-size: 35px;
+  // font-size: 1rem;
+  font-size: 2.2em;
   cursor: pointer;
   z-index: 111;
 }
@@ -1109,10 +1187,11 @@ top: 0;
   color: #fff;
   background: transparent;
   border-radius: 50%;
-  border: 30px solid transparent;
+  border: 1.875em solid transparent;
   transform: translate(-50%,-50%);
-  padding: 23px;
+  padding: 1.4em;
   transition: .35s;
+  font-size: 1rem;
 
   &:before {
     content: "";
@@ -1133,20 +1212,20 @@ top: 0;
     position: absolute;
     top: 0;
     bottom: 0;
-    right: -10px;
+    right: -0.625em;
     left: 0;
     margin: auto;
-    border-left: 17px solid #fff;
-    border-top: 15px solid transparent;
+    border-left: 1em solid #fff;
+    border-top: 0.9em solid transparent;
     content: '';
     width: 0;
     height: 0;
-    border-bottom: 15px solid transparent;
+    border-bottom: 0.9em solid transparent;
     transition: .25s;
   }
 
   &:hover {
-    border: 30px solid hsla(41, 99%, 51%, 0.08);
+    border: 1.875em solid hsla(41, 99%, 51%, 0.08);
 
     &:before {
       box-shadow: none;
@@ -1163,7 +1242,7 @@ top: 0;
   stroke: currentColor;
   stroke-dasharray: 278;
   stroke-dashoffset: 278;
-  stroke-width: 4px;
+  stroke-width: 0.25em;
   transition: stroke-dashoffset .35s;
   transition-delay: .25s;
   stroke-dashoffset: 96;
@@ -1173,13 +1252,24 @@ top: 0;
 
 // - Video btn -
 
-
 // + Catalog download +
+.download-section {
+  @media screen and (max-width: $screen-tablet) {
+    display: none;
+    
+  }
+}
+
 .download-section__catalog {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 222;
+
+  @media screen and (max-width: $screen-netbook) {
+    right: auto;
+    left:0;
+  }
 }
 
 
@@ -1228,6 +1318,7 @@ top: 0;
   width: 8.6875em;
   height: 7.1875em;
   background-image: url("../img/bg/katalog.png");
+  background-size: 100%;
 }
 
 .catalog-download__title {

@@ -44,10 +44,23 @@
 
 .footer-page__logo {
   padding-bottom: 1.2em;
+
+  @media screen and (max-width: $screen-sm-max) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .footer-page__item:nth-child(2) .footer-page__list {
   padding-left: 2.2em;
+
+  @media screen and (max-width: $screen-sm-max) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
 }
 
 .footer-page__list-item:not(:last-child) {
@@ -127,8 +140,11 @@
   &>p:not(:last-child) {
     margin-bottom: .3em;
   }
-}
 
+  @media screen and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+}
 
 
 
@@ -136,6 +152,10 @@
 .social-buttons {
   display: flex;
   font-size: 1rem;
+
+  @media screen and (max-width: $screen-sm-max) {
+    justify-content: center;
+  }
 }
 
 .social-buttons__item:not(:last-child) {
@@ -174,4 +194,10 @@
 .footer-page__btn-viber {
   display: flex;
   justify-content: center;
+}
+
+.contact-info-list {
+  @media screen and (max-width: $screen-sm-max) {
+    order: 2;
+  }     
 }

@@ -174,20 +174,26 @@ function n() {
   // t = n.find("li").first().children().outerWidth(),
   t = n.find("li").first().children().outerWidth(),
   nav = $("#main-nav");
-  nav.removeClass("header-page__menu--nojs");
 
-  i.css("width", t + "px"),
-  n.find("a").on("mouseover", function() {
-    var n = $(this).outerWidth(),
-    t = 0;
-    $(this).parent().prevAll().each(function() {
-      t += parseInt($(this).find("a").outerWidth())
-    }), i.css({
-      width: n + "px",
-      transform: "translate3d(" + t + "px, 0, 0)"
-    });
-  })
+  if ($(window).width() >= 1200) {
+    
+    nav.removeClass("header-page__menu--nojs");
+
+    i.css("width", t + "px"),
+    n.find("a").on("mouseover", function() {
+      var n = $(this).outerWidth(),
+      t = 0;
+      $(this).parent().prevAll().each(function() {
+        t += parseInt($(this).find("a").outerWidth())
+      }), i.css({
+        width: n + "px",
+        transform: "translate3d(" + t + "px, 0, 0)"
+      });
+    })
+
+  }
 }
+
 n();
 // - Ховер меню - 
 

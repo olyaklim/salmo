@@ -116,15 +116,20 @@
 }
 
 .header-page__inner {
-  // position: relative;
-  // display: inline-block;
-  // width: 50%;
-  // display: block;
   flex: 0 0 50%;
 
-  @media screen and (max-width: $screen-sm-max) {
+  @media screen and (max-width: $screen-lg-max) {
     flex: 0 0 auto;
+  }
+
+  @media screen and (max-width: $screen-md-max) {
+    order: 5;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
     order: 2;
+    width: auto;
   }
 }
 
@@ -150,6 +155,10 @@
     opacity: .8;
   }
 
+  @media screen and (max-width: $screen-lg-max) {
+    padding: 1em 0.5em;
+  }
+
   @media screen and (max-width: $screen-sm-max) {
     padding: 1em 0;
   }
@@ -172,6 +181,7 @@
 
 //.info-menu end
 
+
 //.lang-list
 .lang-list {
   position: relative;
@@ -186,7 +196,7 @@
   &:before {
     content: "";
     position: absolute;
-    right: 12px;
+    right: 0.75em;
     top: 0;
     bottom: 0;
     z-index: 14;
@@ -307,6 +317,13 @@
   @media screen and (max-width: $screen-notebook) {
     width: 11.2em;
   }
+
+  @media screen and (max-width: $screen-xs-max) {
+    &--header {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 //.logo end
 
@@ -332,6 +349,10 @@
   width: .9em;
   height: 1em;
   margin-right: .9em;
+
+  @media screen and (max-width: $screen-lg-max) {
+    margin-right: .3em;
+  }
 }
 //.contacts-list end
 
