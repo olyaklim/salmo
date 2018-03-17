@@ -5,6 +5,7 @@
 //.info-menu
 .info-menu {
   display: flex;
+  // justify-content: space-around;
   color: $black-text;
   font-size: 1rem;
   font-size: 0;
@@ -50,8 +51,16 @@
 
 .header-page__menu {
   position: relative;
-  width: 100%;
-  // flex: 1;
+
+  @media screen and (max-width: $screen-md-max) {
+    order: 5;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    order: 2;
+    width: auto;
+  }
 }
 
 .header-page__menu .indicator {
@@ -115,26 +124,8 @@
   }
 }
 
-.header-page__inner {
-  flex: 0 0 50%;
-
-  @media screen and (max-width: $screen-lg-max) {
-    flex: 0 0 auto;
-  }
-
-  @media screen and (max-width: $screen-md-max) {
-    order: 5;
-    width: 100%;
-  }
-
-  @media screen and (max-width: $screen-sm-max) {
-    order: 2;
-    width: auto;
-  }
-}
-
 .info-menu__item {
-   flex: 1;
+   // flex: 1;
    text-align: center;
        font-size: 1rem;
 }
@@ -142,7 +133,7 @@
 .info-menu__link {
   position: relative;
   display: block;
-  padding: 2.108em 0;
+  padding: 2.108em 1em;
   white-space: nowrap;
   font-size: .875em;
   line-height: 1.15;

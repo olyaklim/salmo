@@ -171,20 +171,30 @@ appendArrows: '.sect-info__arrow'
 function n() {
   var n = $("#main-nav").find("ul"),
   i = $("#main-nav").find(".indicator"),
-  // t = n.find("li").first().children().outerWidth(),
+  li_padding = 0,
+  li_width = 0,
+  nav_width = $("#main-nav").find("ul").outerWidth(),
+  count_li = $(".info-menu").children('.info-menu__item').length;
   t = n.find("li").first().children().outerWidth(),
   nav = $("#main-nav");
 
   if ($(window).width() >= 1200) {
-    
+
     nav.removeClass("header-page__menu--nojs");
 
-    i.css("width", t + "px"),
-    n.find("a").on("mouseover", function() {
-      var n = $(this).outerWidth(),
+    $('.info-menu__link').each(function(){
+        li_width = li_width + $(this).width();
+    });
+
+      li_padding = (nav_width - li_width) / count_li;
+
+      i.css("width", t + "px"),
+      n.find("a").on("mouseover", function() {
+      var n = $(this).width() + li_padding,
       t = 0;
+
       $(this).parent().prevAll().each(function() {
-        t += parseInt($(this).find("a").outerWidth())
+        t += $(this).find("a").width() + li_padding;
       }), i.css({
         width: n + "px",
         transform: "translate3d(" + t + "px, 0, 0)"
