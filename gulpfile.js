@@ -37,7 +37,7 @@ const path = {
 };
 
 const config = {
-  js: [`node_modules/jquery/dist/jquery.js`,`${path.src.js}/libs/slick.min.js`, `${path.src.js}/main.js`],
+  js: [`node_modules/jquery/dist/jquery.js`, `node_modules/components-jqueryui/jquery-ui.js`, `${path.src.js}/libs/slick.min.js`, `${path.src.js}/main.js`],
 };
 
 gulp.task('html', () => {
