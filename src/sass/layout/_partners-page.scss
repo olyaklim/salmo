@@ -1,0 +1,78 @@
+// conditions +
+	.conditions {
+		padding: 2.3em 0;
+	}
+// conditions -
+
+// theme-list + 
+
+.theme-list {
+	padding-bottom: 1em;
+	list-style-type: disc;
+    padding-left: 2em;
+}
+// theme-list -
+
+// catalogs-section +
+.catalogs-section__title {
+	margin-bottom: 3em;
+}
+
+.catalogs-section__grid {
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.catalogs-section__item {
+	width: 25%;
+
+	&:hover {
+		.catalog-pdf__wrap {
+			border: 1px solid $brand-color;
+		}
+	}
+
+	@media screen and (max-width: $screen-tablet) {
+		width: 33.33%;
+	}
+
+	@media screen and (max-width: $screen-sm-max) {
+		width: 50%;
+	}
+
+	@media screen and (max-width: $screen-xs-max) {
+		width: 100%;
+	}
+}
+
+.catalog-pdf {
+	display: block;
+    padding: 1em;
+    padding-bottom: 0.8em;
+    font-size: 1rem;
+}
+
+.catalog-pdf__wrap {
+	padding: 1em;
+    border: 1px solid #cccccc;
+    transition: all .3s;
+}
+
+.catalog-pdf__title {
+	margin-bottom: 1em;
+    text-align: center;
+    letter-spacing: .06em;
+    font-weight: 500;
+}
+
+.catalog-pdf__img {
+	position: relative;
+    display: block;
+    padding-bottom: 78%;
+    margin-bottom: 1em;
+}
+
+.catalog-pdf__link {
+	width: 100%;
+}
+// catalogs-section -

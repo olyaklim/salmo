@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
   font-family: $gotham;
   font-weight: 400;
   color: $black;
