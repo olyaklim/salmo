@@ -2,10 +2,37 @@
   overflow-x: hidden;
 }
 
+// + BREAD +
+.bread {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  padding-bottom: 2.5em;
+}
+
+.bread__item {
+  font-size: 0.86em;
+}
+
+.bread__item:not(:last-child) {
+  margin-right: 22px;
+  position: relative;
+}
+.bread__item:not(:last-child):after {
+  content: "/";
+  position: absolute;
+  top: 0;
+  right: -15px;
+}
+
+.bread__link[href]:hover {
+  text-decoration: underline; 
+}
+// - BREAD -
+
 //.info-menu
 .info-menu {
   display: flex;
-  // justify-content: space-around;
   color: $black-text;
   font-size: 1rem;
   font-size: 0;
@@ -51,6 +78,7 @@
 
 .header-page__menu {
   position: relative;
+  margin: auto;
 
   @media screen and (max-width: $screen-md-max) {
     order: 5;
@@ -280,12 +308,13 @@
 .logo {
   position: relative;
   display: block;
-  width: 14em;
+  width: 10.35em;
+  margin-right: 0.67em;
 
   &:before {
     content: '';
     display: block;
-    padding-bottom: 24%;
+    padding-bottom: 30%;
   }
 
   @media screen and (max-width: $screen-notebook) {
@@ -359,12 +388,12 @@
 // + btn viber + 
 .btn-viber {
   display: block;
-  width: 10.5em;
-  height: 3em;
-  line-height: 3;
+  width: 5.65em;
+  height: 2em;
+  line-height: 2;
   background-color: #7b519d;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8em;
   text-transform: uppercase;
   color: white;
   border-radius: 2em;
@@ -389,19 +418,17 @@
 .btn-viber__ico {
   display: inline-block;
   vertical-align: middle;
-  width: 1.9em;
-  height: 1.9em;
+  width: 1em;
+  height: 1em;
 }
 
 // - btn viber -
-
 
 
 //.anchor-aside
 .anchor-aside {
   position: fixed;
   top: 50%;
-  /*bottom: 0;*/
   right: 0;
   margin: auto;
   height: max-content;
@@ -409,9 +436,16 @@
   will-change: transform;
   transform: translateY(-50%);
   background-color: $brand-color;
+  opacity: 0.8;
+  transition: all $anim;
+
+  &:hover {
+    opacity: 1;
+  }
 
   @media screen  and (max-width: $screen-notebook) {
     background-color: transparent;
+    opacity: 1;
   }
 
   @media screen  and (max-width: $screen-tablet) { 
@@ -456,7 +490,11 @@
   }
 
   &.active {
-    background: rgba($brand-color, .55);;
+    background: rgba($brand-color, .85);
+
+    .anchor-aside__helper>* {
+      color: rgba(#ffffff, .55);
+    }
   }
 
   @media screen  and (max-width: $screen-notebook) {
@@ -466,15 +504,17 @@
     background: rgba(171, 171, 171, 0.6);
     border-radius: 50%;
     display: block;
+
+    &.active .anchor-aside__helper>* {
+      color: #ffffff;
+    }
   }
-
 }
-
 
 
 .anchor-aside__helper {
   white-space: nowrap;
-  font-size: .8em;
+  font-size: .95em;
   transition: opacity $anim, visibility $anim;
 
   & > * {
@@ -495,6 +535,7 @@
     margin-left: auto;
     opacity: 0;
     visibility: hidden;
+    font-size: .8em;
   }
 }
 
@@ -511,7 +552,13 @@
     width: 1.675em;
     margin-right: .7em;
     margin-top: .25em;
-    border-bottom: 2px solid currentColor;
+    border-bottom: 2px solid $brand-color;
+  }
+
+  &--white {
+    &::before {
+      border-color: #ffffff;
+    }
   }
 }
 

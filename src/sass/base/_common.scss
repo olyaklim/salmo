@@ -74,3 +74,17 @@ body {
   display: none !important;
   visibility: hidden !important;
 }
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+button:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.lang-list__btn:focus {
+  outline: none;
+}

@@ -58,9 +58,8 @@
 }
 
 .header-page__social-list {
-  // width: 5%;
+  margin-left: 0.7em;
   align-self: center;
-  margin-left: auto;
   
   @media screen and (max-width: $screen-sm-max) {
     margin: auto;

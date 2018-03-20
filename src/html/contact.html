@@ -1,0 +1,192 @@
+//= include/head.html
+//= include/header.html
+
+<main class="main">
+
+  <div class="sect-bread">
+    <div class="container">
+      <div class="main__bread">
+        <ul class="bread">
+          <li class="bread__item">
+            <a class="bread__link" href="">Главная</a>
+          </li>
+
+          <li class="bread__item">
+            <a class="bread__link">Контакты</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-title">
+    <div class="container">
+      <div class="page-title__wrap">
+        <h2 class="sect-title">
+          Обратная связь
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect-contacts">
+    <div class="container">
+      <div class="sect-contacts__contact-list">
+        <ul class="contact-list">
+
+          <li class="contact-list__item">
+            <div class="contact-item  contact-item--address">
+
+              <div class="contact-item__wrap">
+                <div class="contact-item__title">
+                  Адрес
+                </div>
+
+                <div class="contact-item__descr">
+                  <div class="contact-item__text">
+                    03680, м. Київ, вул. Пшенична, буд. 19
+                  </div>  
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="contact-list__item">
+            <div class="contact-item  contact-item--phone">
+              <div class="contact-item__wrap">
+                <div class="contact-item__title">
+                  Телефон
+                </div>
+                <div class="contact-item__descr">
+                  <a class="contact-item__text" href="tel:+380445555555">
+                    +380 (44) 777-00-56
+                  </a>
+
+                  <a class="contact-item__text" href="tel:+380445555555">
+                    +380 (44) 888-8-200
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="contact-list__item">
+            <div class="contact-item  contact-item--email">
+              <div class="contact-item__wrap">
+                <div class="contact-item__title">
+                  E-mail
+                </div>
+                <div class="contact-item__descr">
+                  <div class="contact-item__text">
+                    info@salmo.ua
+                  </div>
+
+                  <div class="contact-item__text">
+                    info@salmo.ua
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="contact-list__item">
+            <div class="contact-item  contact-item--calendar">
+              <div class="contact-item__wrap">
+                <div class="contact-item__title">
+                  График работы
+                </div>
+                <div class="contact-item__descr">
+                  <div class="contact-item__text">
+                    Пн-Пт: с 9:00 до 18:00
+                  </div>
+
+                  <div class="contact-item__text">
+                    Сб, ВС: выходной
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-sect">
+    <div class="container">
+      <div class="form-sect__wrap">
+        <div class="form-sect__title">
+          Есть вопросы? Напишите нам:
+        </div>
+
+        <div class="form-sect__form-wrap application_form_block">
+          <form class="form-main form-sect__form-user" enctype="multipart/form-data">
+            <p class="success_submit"></p>
+            <input type="hidden" name="request_type" value="2">
+            <div class="form-main__inputs">
+              <div class="form-main__field-left">
+                <div class="form-main__field">
+                  <label class="input-field  required">
+                    <input class="input-field__input" type="text" name="name">
+                    <p class="error-block"></p>
+                    <span class="input-field__text">Ваше имя</span>
+                  </label>
+                </div>
+
+                <div class="form-main__field">
+                  <label class="input-field  required">
+                    <!--                  class  .required-->
+                    <input class="input-field__input input-field__input--phone" name="phone" type="tel">
+                    <p class="error-block"></p>
+                    <span class="input-field__text">+38 (___) ___-__-__</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-main__field  form-main__field--area">
+                <label class="input-field  input-field--area  required">
+                  <!--                  class  .required-->
+                  <textarea class="input-field__input" cols="30" rows="10" name="comment[name]"></textarea>
+                  <p class="error-block"></p>
+                  <span class="input-field__text">Комментарий: </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-main__btn-wrap">
+              <p class="error-block"></p>
+              <button class="form-main__btn btn  btn--red" type="button" onclick="application_send_form(this);">
+              Отправить заявку! </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect-maps">
+
+    <div class="sect-maps__map-list">
+
+      <ul class="map-list">
+        <li class="map-list__item">
+
+          <div class="map-item__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2541.8717020133495!2d30.402526115730524!3d50.42486197947187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1520108512158" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+        </li>
+      </ul>
+
+    </div>
+
+  </section>
+
+</main>
+
+//= include/footer.html
+//= include/foot.html

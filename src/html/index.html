@@ -73,11 +73,11 @@
       <div class="video-bord__thumb thumb  mythumb">
 
         <div class="video-bord__btn-play  video-btn">
-          <span class="video-btn__ico">
+          <button class="video-btn__ico" type="button">
             <svg class="video-btn__svg inline-svg-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#radius"></use>
             </svg>
-          </span>
+          </button>
         </div>
 
         <div class="video-bord__overlay  overlay">
@@ -91,19 +91,19 @@
     </div>
   </section>
   
-  <div class="download-section">
+  <aside class="download-section">
     <div class="container">
       <div class="download-section__catalog  catalog-download">
-          <div class="catalog-download__wrap">
+          <div class="catalog-download__wrap" tabindex="0">
             <div class="catalog-download__btn">
               <div class="catalog-download__title">Скачайте каталог</div>
 
               <ul class="catalog-download__list">
                 <li class="catalog-download__item">
-                  <a class="catalog-download__link" href="#" download>Зимний каталог</a>
+                  <a class="catalog-download__link" href="#" download tabindex="1">Зимний каталог</a>
                 </li>
                 <li class="catalog-download__item">
-                  <a class="catalog-download__link" href="#" download>Летний каталог</a>
+                  <a class="catalog-download__link" href="#" download tabindex="2">Летний каталог</a>
                 </li>
               </ul>
 
@@ -112,13 +112,13 @@
           </div>
       </div>
     </div>
-  </div>
+  </aside>
 
   <section class="about-section  aside-sect"  id="sect-2">
     <div class="container">
       <div class="about-section__wrap">
-        <div class="about-section__img">
-          <img class="img-about" src="../img/bg/about.jpg" alt="">
+        <div class="about-section__img-wrap">
+          <img class="about-section__img" src="../img/bg/about.jpg" alt="">
         </div>
 
         <div class="about-section__desc">
@@ -147,11 +147,11 @@
 
 
 
-  <div class="sect-info  aside-sect"  id="sect-3">
+  <section class="sect-info  aside-sect"  id="sect-3">
     <div class="container">
 
       <div class="sect-info__title">
-        <h2 class="sect-title">
+        <h2 class="sect-title  sect-title--white">
           Бренды      
         </h2>
       </div>
@@ -174,12 +174,12 @@
                 <ul class="social-desc__list">
                   <li class="social-desc__item">
                     <div class="social-desc__name">Веб-сайт:</div>
-                    <a href="http://luckyjohn.info" class="social-desc__link">www.luckyjohn.info</a>
+                    <a class="social-desc__link" href="http://luckyjohn.info" target="_blank">www.luckyjohn.info</a>
                   </li>
 
                   <li class="social-desc__item">
                     <div class="social-desc__name">Facebook:</div>
-                    <a href="https://www.facebook.com/luckyjohn" class="social-desc__link">facebook.com/luckyjohn</a>
+                    <a class="social-desc__link" href="https://www.facebook.com/luckyjohn" target="_blank">facebook.com/luckyjohn</a>
                   </li>
                 </ul>
               </div>
@@ -247,7 +247,7 @@
         </div> 
       </div>
     </div>
-  </div>
+  </section>
 
 
   <section class="section-sale  aside-sect"  id="sect-4">
@@ -354,7 +354,7 @@
     <div class="container">
 
       <div class="comments-sect__title">
-        <h2 class="sect-title">
+        <h2 class="sect-title  sect-title--white">
           Отзывы     
         </h2>
       </div>

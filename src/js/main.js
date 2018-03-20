@@ -1,11 +1,21 @@
 // console.log('Hello world!');
 $(document).ready(function () {
 
-  // lang-list
-  $('.js-lang-list .lang-list__btn').click(function() {
-    $(this).closest('.js-lang-list').toggleClass('active');
-    $(this).closest('.lang-list__item').addClass('active').siblings().removeClass('active');
-  });
+  // Enable
+  $('.lang-list__item .lang-list__btn').prop( "disabled", true );
+  $('.lang-list__item.active .lang-list__btn').prop( "disabled", false );
+
+    // lang-list
+    $('.js-lang-list .lang-list__btn').click(function() {
+      $(this).closest('.js-lang-list').toggleClass('active');
+      $(this).closest('.lang-list__item').addClass('active').siblings().removeClass('active'); 
+
+      $('.js-lang-list .lang-list__btn').prop( "disabled", true );
+      $('.js-lang-list.active .lang-list__btn').prop( "disabled", false );
+      $('.lang-list__item.active .lang-list__btn').prop( "disabled", false );
+
+    });
+
 
   // .main-slider
   $(".js-slider-ban").slick({
@@ -151,7 +161,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToScroll: 1,
     slidesToShow: 1,
-    dots: true,
+    dots: false,
     autoplay: false,
     adaptiveHeight: true,
     arrows: true,
@@ -219,7 +229,9 @@ $(document).ready(function () {
 
   $(document).on("scroll", onScroll);
 
-  $("a[href^=#]").click(function(e) {
+  // $("a[href^=#]").click(function(e) {
+
+  $(".anchor-aside__link").click(function(e) {   
     e.preventDefault();
     $(document).off("scroll");
     $(menu_selector + " a.active").removeClass("active");
@@ -232,8 +244,6 @@ $(document).ready(function () {
     }, 500, function() {
       window.location.hash = hash - 50;
       $(document).on("scroll", onScroll);
-
-
     });
   });
   // - ANCHOR-LIST -

@@ -1,0 +1,304 @@
+// + Список контактов +
+
+.sect-contacts__contact-list {
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	text-align: center;
+	font-size: 12px;
+}
+
+.contact-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+}
+
+.contact-list__item {
+	width: 50%;
+	margin-bottom: 1em;
+
+	@media screen and (max-width: $screen-sm-max) {
+		width: 100%;
+	}
+}
+
+.contact-item {
+	padding: 1em;
+	font-size: 1rem;
+	text-align: left;
+
+	&::before {
+		content: "";
+		float: left;
+		width: 80px;
+		height: 80px;
+		margin-left: 30px;
+		margin-bottom: 15px;
+		background-color: #fff;
+		background-size: 50%;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-color: #f3f2f2;
+		transition: all .2s ease 0s;
+	}
+
+	&--email::before {
+		background-image: url("../img/ico/email.svg");
+	}
+
+	&--phone::before {
+		background-image: url("../img/ico/i-phone.svg");
+	}
+
+	&--address::before {
+		background-image: url("../img/ico/i-map.svg");
+	}
+
+	&--calendar::before {
+		background-image: url("../img/ico/calendar.svg");
+	}
+}
+
+
+.contact-item__title {
+	margin-bottom: 0.88em;
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 1.3;
+	color: $brand-color;
+}
+
+.contact-item__wrap {
+	margin-left: 8em;
+}
+
+.contact-item__text {
+	display: block;
+	font-size: .86em;
+
+	&:not(:last-child) {
+		margin-bottom: .3em;
+	}
+}
+// - Список контактов -
+
+
+// + Список гугл карт +
+.map-item {
+	font-size: 1rem;
+}
+
+.map-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+}
+
+.map-item__title {
+	margin-bottom: .4em;
+	font-size: 1.8em;
+	font-weight: 800;
+	line-height: 1.8;
+}
+
+.map-item__descr {
+	margin-bottom: 1.4em;
+}
+
+.map-list__item {
+	width: 100%;
+}
+// - Список гугл карт -
+
+// + Form +
+
+.form-sect__wrap {
+	padding: 4.5em 4em;
+
+	@media screen and (max-width: $screen-xs-max) {
+		padding: 1em;
+	}
+}
+
+.form-sect__title {
+	margin-bottom: 0.67em;
+    font-size: 2.2em;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: center;
+}
+
+// + .form-sect +
+.form-sect {
+	background-color: #333;
+	background-image: url("../img/bg/bg_comment.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50% center;
+	font-size: 1rem;
+	color: $white;
+}
+
+.form-main {
+	font-size: 1rem;
+}
+
+.error-block {
+	padding: 0 1.2em;
+	color: $red-color-hover;
+}
+
+.form-main__inputs {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1em;
+}
+
+.form-main__btn-wrap {
+	padding: 0 6px 10px 6px;
+}
+
+.form-main__btn {
+	@media screen and (max-width: $screen-xs-max) {
+		width: 100%;
+	}
+}
+
+.form-main__field-left {
+	width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $screen-md-max) {
+		width: 100%;
+	}
+}
+
+.form-main__field {
+	width: 100%;
+	padding: 0 5px;
+	margin-bottom: 10px;
+
+	&.form-main__field--area {
+		width: 50%;
+
+		@media screen and (max-width: $screen-md-max) {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: $screen-md-max) {
+		width: 100%;
+	}
+
+	@media screen and (max-width: $screen-sm-max) {
+		width: 100%;
+	}
+}
+// - .form-sect -
+
+// + input +
+.input-field {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 3.429em;
+	border: 1px solid #484848;
+	border-radius: 0.357em;
+	background-color: $white;
+	font-size: 0.875em;
+	color: $dkgrey; 
+
+	&.active {
+		.input-field__text {
+			opacity: 0;
+		}
+	}
+
+	&.required {
+		.input-field__text { 
+			padding-right: 10px;
+			line-height: 1.32;
+
+			&:after {
+				content: '*';
+				margin-left: 5px;
+				vertical-align: top;
+				color: $red-color;
+			}
+		}
+	}
+
+	&.input-field--area {
+		height: 100%;
+
+		.input-field__text {  
+			top: 0;
+			padding: 1.2em;
+			transform: none;
+		}
+
+		.input-field__input {
+			padding: 1.2em;
+		}
+	}
+
+	&.error {
+		color: red;
+		border-color: red;
+
+		.input-field__text {
+			color: inherit;
+		}
+	}
+
+	@media screen and (max-width: $screen-md-max) {
+		&.input-field--area {
+			height: 5.714em;
+		}
+	}
+}
+
+.input-field__input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	padding: 0 1.2em;
+	background-color: transparent;
+	border: none;
+
+	&:focus ~ .input-field__text {
+		opacity: 0;
+	}
+
+	@media screen  and (min-width: $screen-md-max) {
+		&:hover, &:focus {
+			& ~ .input-field__text {
+				color: inherit;
+			}
+		}
+	}
+}
+
+.input-field__text {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+	transform: translateY(-50%);
+	padding-left: 1.2em;
+	white-space: nowrap;
+	color: lightgrey;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transition: opacity $anim, color $anim;
+}
+
+// - input -
+
+// - Form -
